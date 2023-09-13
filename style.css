@@ -1,0 +1,424 @@
+/* ========== Start Variables ===================== */
+:root
+{
+    --main-color: rgb(252, 228, 8);
+    --secondary-color: rgb(197, 137, 7);
+    --section-color: rgb(184, 134, 28);
+    --section-padding: 100px;
+}
+/* ========= End Variables ========= */
+/* =================  Start Global Rules ==================== */
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body
+{
+    background-color: #eee;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.heading-section
+{
+    color: var(--section-color);
+    text-align: center;
+    font-size: 50px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: relative;
+    padding-bottom: var(--section-padding);
+}
+.heading-section::before
+{
+    content: '';
+    position: absolute;
+    background-color: var(--section-color);
+    width: 200px;
+    height: 4px;
+    left: 50%;
+    bottom: 85px;
+    transform: translate(-50%);
+}
+.heading-section::after
+{
+    content: '';
+    position: absolute;
+    background-color: var(--section-color);
+    width: 80px;
+    height: 4px;
+    left: 50%;
+    bottom: 70px;
+    transform: translate(-50%);
+}
+html{
+    scroll-behavior: smooth;
+}
+/*  ================= End Global Rules =======================*/
+/* =================== Start Header Section  ========================= */
+section
+{
+    max-width: 100%;
+    position: relative;
+}
+section .view
+{
+    width: 100%;
+    max-width: 100%;
+    height: 924px;
+}
+section header 
+{
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 90px;
+    background-color: rgba(255, 200, 48, 0.355);
+    z-index: 10;
+    border-bottom: 1px solid rgba(161, 119, 5, 0.705);
+}
+header a img 
+{
+    width: 100px;
+    height: 100px;
+    margin-left: 30px;
+}
+header ul 
+{
+    display: flex;
+    padding: 30px 40px;
+}
+header ul li 
+{
+    display: inline-block;
+    list-style: none;
+    margin-left: 50px;
+    font-size: 25px;
+    transition: 0.3s;
+}
+header ul li:hover 
+{
+    transform: translateY(-10px) rotate(-5deg) scale(1.1);
+}
+header ul li  a 
+{
+    text-decoration: none;
+    line-height: 1.8;
+    color: #fff;
+    transition: .4s;
+}
+header ul li  a:hover
+{
+    color: var(--secondary-color);
+}
+/* ================= End Header Section  ======================= */
+/* Start Landing Section */
+.landing
+{
+    min-height: 100vh;
+    background-image: url(images/view.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.landing .overlay
+{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 30%);
+}
+.landing .content 
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+.landing .content .text 
+{
+    width: 50%;
+    padding: 80px;
+    background-color: rgba(240, 240, 39, 0.541);
+    border-radius: 5px;
+}
+.landing .content .text h2 
+{
+    color: #fff;
+    padding: 20px 0px;
+    font-size: 40px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.landing .content .text h2 span
+{
+    color: var(--main-color);
+    font-family: cursive;
+    font-size: 50px;
+}
+.landing .content .text p 
+{
+    color: #ebebeb;
+    font-size: 20px;
+    line-height: 1.6;
+}
+/* End Landing Section */
+/* Start Why Section */
+.why
+{
+    padding-top: var(--section-padding);
+    width: 100%;
+    background-color: #fff;
+}
+.why .content .text 
+{
+    width: 100%;
+    padding: 120px 0 100px ;
+    background-color: #754207;
+    text-align: center;
+}
+.why .content .text h3
+{
+    margin: 10px;
+    padding-bottom: 80px;
+    text-align: center;
+    font-size: 60px;
+    color: var(--main-color);
+    font-family: cursive;
+}
+.why .content .text p 
+{
+    width: 50%;
+    text-align: center;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    line-height: 2;
+    font-size: 25px;
+    border: 1px solid var(--section-color);
+    padding: 50px;
+    background-color: rgb(199, 137, 4);
+    color: #fff;
+    border-radius: 5px;
+}
+/* End Why Section */
+/* Start Services Section */
+.services
+{
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    background-color: #f3f0f0;
+    width: 100%;
+}
+.services .content
+{
+    width: 100%;
+}
+.services .content .cols 
+{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.services .content .cols img 
+{
+    border-radius: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.services .content .cols .image-1 img:hover 
+{
+    transform: scale(1.1) rotate(-1deg);
+} 
+.services .content .cols h2 
+{
+    text-align: center;
+    margin: 20px 0;
+    color: rgb(255 161 11);
+    font-size: 30px;
+    background-color: #754207;
+    padding: 10px;
+    border-radius: 5px;
+}
+@media (max-width: 767px) 
+{
+    .services .content .cols img 
+    {
+        width: 350px;
+        height: 350px;
+    }
+    .services .content .cols h2 
+    {
+        font-size: 25px;
+    }
+}
+/* ===================== End Services Section ====================== */
+/*  ==================== Start price Section ======================= */
+.price
+{
+    background-color: #ececec;
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+.price .content 
+{
+    width: 100%;
+}
+.price .content .cols
+{
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 40px;
+    width: 100%;
+}
+.price .content .cols .price-1
+{
+    background: linear-gradient(#754207 80%,#e28418);
+    width: 50%;
+    height: 600px;
+    border: 1px solid var(--main-color);
+    border-radius: 5px;
+    margin: 0 50px;
+    overflow: hidden;
+}
+@media (max-width: 991px) 
+{
+    .price .content .cols .price-1
+    {
+        width: 80%;
+    }
+}
+.price .content .cols .price-1 h2
+{
+    color: var(--main-color);
+    text-align: center;
+    font-size: 35px;
+    letter-spacing: 1.5px;
+    border: 1px solid #e28418;
+    background-color: #e284183d;
+    border-radius: 5px;
+}
+.price .content .cols .price-1 h2 span
+{
+    font-size: 18px;
+}
+.price .content .cols .price-1 p 
+{
+    padding: 40px 20px 30px;
+    line-height: 2;
+    font-size: 20px;
+    color: #e28418;
+    text-align: center;
+    background-color: #ff8b0711;
+    border: 1px solid #e28418;
+}
+/* End price Section */
+
+/* ===================== Start Contact Section ========================= */
+.contact
+{
+    padding-top: var(--section-padding);
+    /* padding-bottom: var(--section-padding); */
+}
+.contact .content .cols 
+{
+    width: 100%;
+}
+.contact .content .cols text
+{
+    width: 100%;
+}
+.contact .content .cols h2
+{
+    text-align: center;
+    padding: 20px;
+    font-size: 35px;
+    background-color: #00000005;
+}
+.contact .content .cols .social 
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 40px 60px;
+    margin-top: 80px;
+}
+.contact .content .cols a img
+{
+    border-radius: 50%;
+    background-color: #754207;
+    text-align: center;
+    width: 100%;
+    margin-left: 5px;
+    width: 60px;
+    transition: .4s;
+}
+.contact .content .cols a:hover
+{
+    border-bottom: 1px solid #fff;
+}
+.contact .content .cols a  img:hover
+{
+    transform: translateY(-15px) scale(1.1);
+}
+.contact .footer 
+{
+    width: 100%;
+    background-color: #333;
+}
+.contact .footer p 
+{
+    width: 100%;
+    height: 150px;
+    color: var(--main-color);
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+/* ================ End Contact Section  ========================= */
+
+/* ============  Responsive  ==================*/
+@media (max-width: 991px) {
+    header ul li 
+    {
+        margin-left: 25px;
+        font-size: 20px;
+    }
+    .landing .content .text 
+    {
+        width: 100%;
+    }
+    .why .content .text p 
+    {
+        width: 80%;
+    }
+}
+@media (max-width: 767px) {
+    header ul li 
+    {
+        margin-left: 10px;
+        font-size: 15px;
+    }
+    .price .content .cols
+    {
+        flex-wrap: wrap;
+    }
+    .price .content .cols .price-1
+    {
+        margin-top: 30px;
+    }
+}
+@media (max-width: 450px) 
+{
+    header ul li 
+    {
+        margin-left: 5px;
+        font-size: 10px;
+    }
+}   
