@@ -232,6 +232,7 @@ header ul li  a:hover
 .services .content .cols .image-1 img:hover 
 {
     transform: scale(1.1) rotate(-1deg);
+    margin-bottom: 10px;
 } 
 .services .content .cols h2 
 {
