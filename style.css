@@ -393,6 +393,7 @@ header ul li  a:hover
     justify-content: space-evenly;
     padding: 40px 60px;
     margin-top: 80px;
+    flex-wrap: wrap;
 }
 .contact .content .cols a img
 {
@@ -429,6 +430,15 @@ header ul li  a:hover
     flex-wrap: wrap;
     margin-top: 50px;
 }
+.contact .footer span 
+{
+    margin-left: 10px;
+    font-family: cursive;
+    color: #ffffff;
+    font-size: 27px;
+    font-weight: bold;
+}
+
 /* ================ End Contact Section  ========================= */
 
 /* ============  Responsive  ==================*/
@@ -464,5 +474,10 @@ header ul li  a:hover
     {
         margin-left: 5px;
         font-size: 10px;
+    }
+    .contact .content .cols .social a
+    {
+        margin-left: 10px;
+        margin-bottom: 10px;
     }
 }   
