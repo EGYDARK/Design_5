@@ -76,6 +76,7 @@ section header
     background-color: rgba(255, 200, 48, 0.355);
     z-index: 10;
     border-bottom: 1px solid rgba(161, 119, 5, 0.705);
+    max-width: 100%;
 }
 header a img 
 {
@@ -179,27 +180,73 @@ header ul li  a:hover
     padding: 120px 0 100px ;
     background-color: #754207;
     text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+.why .content .text .about-text
+{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.why .content .text .about-text h2 
+{
+    width: 100%;
+    font-size: 35px;
+    color: var(--secondary-color);
+    position: relative;
+    margin: 50px 0 0;
+}
+.why .content .text .about-text h2 img:first-child
+{
+    width: 30px;
+    position: relative;
+    transform: translate(-50%);
+}
+.why .content .text .about-text h2 img:nth-child(2)
+{
+    width: 30px;
+    position: relative;
+    left: 20px;
+    transform: translate(-50%) rotate(359deg);
+}
+.why .content .text .about-text .ser-2 img:first-child
+{
+    width: 30px;
+    position: relative;
+    transform: translate(-50%) rotate(180deg);
+}
+.why .content .text .about-text .ser-2 img:nth-child(2)
+{
+    width: 30px;
+    position: relative;
+    left: 25px;
+    transform: translate(-50%) rotate(180deg);
+}
+.why .content .text .about-text .ser-3 img:nth-child(2)
+{
+    width: 30px;
+    position: relative;
+    left: 25px;
+    transform: translate(-50%) rotate(180deg);
 }
 .why .content .text h3
 {
     margin: 10px;
-    padding-bottom: 80px;
     text-align: center;
     font-size: 60px;
-    color: var(--main-color);
+    color: #ff0;
     font-family: cursive;
 }
 .why .content .text p 
 {
-    width: 50%;
-    text-align: center;
-    position: relative;
-    left: 50%;
-    transform: translate(-50%);
+    width: 100%;
+    text-align: left;
     line-height: 2;
     font-size: 25px;
     border: 1px solid var(--section-color);
-    padding: 50px;
+    padding: 80px 30px;
+    margin: 20px;
     background-color: rgb(199, 137, 4);
     color: #fff;
     border-radius: 5px;
@@ -238,7 +285,7 @@ header ul li  a:hover
 {
     text-align: center;
     margin: 20px 0;
-    color: rgb(252, 228, 8);
+    color: var(--main-color);
     font-size: 30px;
     background-color: #754207;
     padding: 10px;
@@ -289,7 +336,7 @@ header ul li  a:hover
 {
     .price .content .cols .price-1
     {
-        width: 80%;
+        width: 90%;
     }
 }
 .price .content .cols .price-1 h2
@@ -394,10 +441,6 @@ header ul li  a:hover
     .landing .content .text 
     {
         width: 100%;
-    }
-    .why .content .text p 
-    {
-        width: 80%;
     }
 }
 @media (max-width: 767px) {
